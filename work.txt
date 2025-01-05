@@ -1,0 +1,7 @@
+{
+    "title": "Laptop",
+    "price": 125000,
+    "description": "lenovo",
+    "image": "https://nairobicomputershop.co.ke/media/products/2022/08/15.6_victus_01.jpg",
+    "quantity": 10
+}
