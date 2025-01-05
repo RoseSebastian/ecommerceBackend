@@ -16,6 +16,9 @@ mongoose.connect(db_link)
 })
 
 app.use(express.json)
+app.get("/",(req,res) =>{
+    res.send("API is live")
+})
 app.use("/user", userRouter)
 app.use("/products", productRouter)
 
