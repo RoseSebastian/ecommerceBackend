@@ -4,10 +4,9 @@ const mongoose = require("mongoose")
 const productRouter = require("./src/routes/productRouter")
 const userRouter = require("./src/routes/userRouter")
 
-const app = express()
 const port = process.env.PORT;
 const db_link = process.env.DB_CONNECT_LINK
-const db_local = process.env.DB_LOCAL
+const app = express()
 
 mongoose.connect(db_link)
 .then(console.log("DB connected successfully"))
@@ -16,9 +15,11 @@ mongoose.connect(db_link)
 })
 
 app.use(express.json)
+
 app.get("/",(req,res) =>{
     res.send("API is live")
 })
+
 app.use("/user", userRouter)
 app.use("/products", productRouter)
 
